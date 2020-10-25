@@ -1,0 +1,108 @@
+#include<stdio.h> #include<string.h> int main()
+
+
+int nr,nc,i,j,k;
+
+scanf("%d%d",&nr,&nc); char a[nr+1][1000]; for(i=l;i<=nr;i++) scanf("%s",a[i]);
+int ipx,ipy; scanf("%d%d",&ipx,&ipy); char c[1000];
+int count=l;
+
+while(1>0)
+
+{scanf("%s",c); int d=strlen(c); if(c[i]=='q')
+ 
+break; for(i=0;i<d;i++)
+{if(c[i]=='q’) break; if(c[i]==’r')
+count=count+1; if(c[i]==’l') count=count-1; if(count==0) count=4; if(count>4) count=count-4; a[ipx][ipy]='R",
+if(count==l &&c[i]=='f&&a[ipx-1][ipy]!='x’&&ipx-1>0)
+
+
+
+a[ipx-1][ipy]=’R", ipx=ipx-1;
+
+
+if(count==l &&c[i]=='b'&&a[ipx+1][ipy]!=’x'&&ipx+l<=nr)
+
+
+
+a[ipx+1][ipy]=’R”, ipx=ipx+1;
+
+
+if(count==2&&c[i]=='f&&a[ipx][ipy+1]!=’x’&&ipy+l<nc)
+
+
+
+a[ipx][ipy+1]='R",
+ 
+ipy=ipy+1;
+
+
+
+if(count==2&&c[i]=='b'&&a[ipx][ipy-1]!=’x'&&ipy-1>0)
+
+
+
+a[ipx][ipy-1]='R';
+
+ipy=ipy-1;
+
+
+
+if(count==3&&c[i]=='f&&a[ipx+1][ipy]!='x’&&ipx+1<=nr)
+
+
+
+a[ipx+1][ipy]='R'; ipx=ipx+1;
+
+
+if(count==3&&c[i]=='b'&&a[ipx-1][ipy]!=’x'&&ipx-1>0)
+
+
+
+a[ipx-1][ipy]='R'; ipx=ipx-1;
+
+
+if(count==4&&c[i]=='f&&a[ipx][ipy-1]!='x’&&ipy-1>=0)
+
+
+
+a[ipx][ipy-1]='R';
+
+ipy=ipy-1;
+
+
+
+if(count==4&&c[i]=='b'&&a[ipx][ipy+1]!=’x'&&ipy+l<nc)
+
+
+
+a[ipx][ipy+1]='R';
+
+ipy=ipy+1;
+ 
+}
+}
+}
+if(count==1)
+printf("N\n");
+if(count==2)
+printf("E\n");
+if(count==3)
+printf("S\n");
+if(count==4)
+printf("W\n");
+for (i=1;i<=nr;i++)
+}
+printf("%s",a[i]);
+ printf("\n");
+}
+}
+
+
+
+
+
+
+
+
+
